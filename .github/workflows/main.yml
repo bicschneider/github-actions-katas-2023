@@ -56,4 +56,4 @@ jobs:
     - name: build docker
       run: set -eux && chmod +x ci/build-docker.sh && export GIT_COMMIT="GA-$GITHUB_SHA" && ci/build-docker.sh
     - name: push docker
-      run: set -eux && chmod +x ci/push-docker.sh && export GIT_COMMIT="GA-$GITHUB_SHA" && ci/push-docker.sh
+      run: set -eux && chmod +x ci/push-docker.sh && export GIT_COMMIT="GA-$GITHUB_SHA" && bash -eux ci/push-docker.sh
